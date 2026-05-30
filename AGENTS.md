@@ -12,81 +12,6 @@ AI-Powered Multilingual Civic Grievance Intelligence Platform
 
 ---
 
-# Team Structure
-
-## Agent 1 — Product Lead & Project Manager
-
-### Responsibilities
-
-* Problem definition
-* Requirement gathering
-* Feature prioritization
-* Documentation
-* Presentation
-* Demo preparation
-
-### Deliverables
-
-* README.md
-* USER_MANUAL.md
-* CONTRIBUTING.md
-* Pitch Deck
-* Project Reports
-
----
-
-## Agent 2 — Frontend Developer (Citizen Portal)
-
-### Responsibilities
-
-Build citizen-facing features:
-
-* Authentication UI
-* Complaint Submission Form
-* Voice Recording Interface
-* Image Upload
-* Location Capture
-* Complaint Tracking
-
-### Technologies
-
-* React
-* Vite
-* Tailwind CSS
-
----
-
-## Agent 3 — Frontend Developer (Admin Dashboard)
-
-### Responsibilities
-
-Build administrative tools:
-
-* Dashboard UI
-* Analytics
-* Complaint Management
-* Filters and Search
-* Reports
-
-### Technologies
-
-* React
-* Tailwind CSS
-* Chart.js / Plotly
-
----
-
-## Agent 4 — Backend Developer
-
-### Responsibilities
-
-Develop:
-
-* REST APIs
-* Authentication
-* Database Models
-* Ticket Management
-* File Upload Handling
 
 ### Technologies
 
@@ -95,18 +20,6 @@ Develop:
 
 ---
 
-## Agent 5 — AI/ML Engineer
-
-### Responsibilities
-
-Develop AI services:
-
-* Speech-to-Text
-* Language Detection
-* Complaint Classification
-* Department Routing
-* Priority Prediction
-* Duplicate Complaint Detection
 * Summarization
 
 ### Technologies
