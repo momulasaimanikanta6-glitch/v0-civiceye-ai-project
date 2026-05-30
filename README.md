@@ -34,33 +34,6 @@ CivicEye AI focuses on the quality and intelligence of grievance intake. It addr
 - **Priority scoring:** Urgent public issues can be highlighted faster for response teams.
 - **National analytics:** Complaint patterns can be viewed across states, regions, or departments for better governance insights.
 
-## Working Plan by 1:00 PM Tomorrow
-
-The goal is to build a focused MVP, not a full national grievance platform.
-
-### Tonight
-
-- Finalize the citizen complaint flow: voice/text input -> AI processing -> structured grievance ticket.
-- Build the citizen interface with language selection, complaint field, and submit flow.
-- Build backend APIs for complaint intake, storage, and retrieval.
-- Build the admin dashboard with category, department, priority, and status display.
-- Integrate one voice provider and one AI routing workflow.
-
-### Tomorrow Morning
-
-- Add sample complaints in Telugu, Hindi, and English.
-- Add AI-based complaint classification and department routing.
-- Add duplicate detection and one analytics card such as most reported issue.
-- Seed example complaints from multiple Indian states.
-- Rehearse one complete end-to-end demo.
-
-### Deliverable by 1:00 PM
-
-- Working citizen complaint page.
-- Working AI response in structured JSON.
-- Working backend ticket creation.
-- Working admin dashboard view.
-- Stable live demo with seeded national-level complaint examples.
 
 ## Tech Stack
 
