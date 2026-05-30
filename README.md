@@ -1,93 +1,106 @@
-# Civiceye-ai
+# CivicEye AI India
 
+**CivicEye AI India** is an intelligent, multilingual civic grievance intake and resolution-support platform designed for the **National level - India** focus area. It enables citizens to submit complaints through voice, text, image, and location, then uses AI to convert raw complaints into structured, actionable grievance tickets for faster public-service response.
 
+## Focus Area
 
-## Getting started
+**National level - India.** This focus is relevant because India already operates national grievance systems such as **CPGRAMS**, and the public grievance ecosystem is actively moving toward multilingual and multimodal grievance filing using AI and Bhashini support.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Problem Statement
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+India has national grievance redressal platforms, but many citizens still face friction while filing complaints clearly, selecting the right department, and using digital systems in their preferred language. At scale, complaints may be poorly written, duplicated, misrouted, or difficult for officials to process quickly.
 
-## Add your files
+This challenge becomes more serious because India has high linguistic diversity, uneven digital literacy, and large complaint volumes across ministries, departments, and states. Existing platforms support submission, but there is still room for an intelligent layer that improves accessibility, complaint quality, triage, and resolution readiness.
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+## Proposed Solution
 
+CivicEye AI India acts as an AI-powered citizen interface and grievance intelligence layer. Citizens can file complaints using **voice, text, image, and location** in multiple Indian languages, and the platform uses speech-to-text, complaint normalization, classification, department mapping, and priority scoring to create structured complaint tickets.
+
+The system is designed to improve grievance intake quality rather than replace existing government systems. It helps citizens explain issues naturally while helping administrators receive cleaner, categorized, and more actionable complaint data.
+
+## Existing Solution
+
+India already has **CPGRAMS**, the Government of India's public grievance portal, as the main national platform for grievance lodging and tracking. CPGRAMS has also been enhanced through collaboration between DARPG and Bhashini to support multilingual and multimodal grievance submission, including regional-language voice input.
+
+Another relevant existing solution is the **National Consumer Helpline (NCH)**, which uses AI-powered speech recognition, translation, and chatbot support across multiple channels. This shows that India is already adopting AI in grievance systems, but mainly in domain-specific redressal flows rather than as a unified civic complaint intelligence platform.
+## What unique problems does CivicEye AI solve?
+
+CivicEye AI focuses on the quality and intelligence of grievance intake. It addresses several gaps that existing systems do not solve strongly enough:
+
+- **Voice-first filing:** Citizens can report issues in Telugu, Hindi, English, or mixed language instead of relying mainly on typed form entry.
+- **AI-based department suggestion:** The system helps map complaints to the right authority, reducing confusion for citizens.
+- **Complaint summarization:** Long or emotional complaints are converted into short, operational summaries for admins.
+- **Duplicate clustering:** Similar complaints from the same area can be grouped into one broader incident pattern.
+- **Priority scoring:** Urgent public issues can be highlighted faster for response teams.
+- **National analytics:** Complaint patterns can be viewed across states, regions, or departments for better governance insights.
+
+## Working Plan by 1:00 PM Tomorrow
+
+The goal is to build a focused MVP, not a full national grievance platform.
+
+### Tonight
+
+- Finalize the citizen complaint flow: voice/text input -> AI processing -> structured grievance ticket.
+- Build the citizen interface with language selection, complaint field, and submit flow.
+- Build backend APIs for complaint intake, storage, and retrieval.
+- Build the admin dashboard with category, department, priority, and status display.
+- Integrate one voice provider and one AI routing workflow.
+
+### Tomorrow Morning
+
+- Add sample complaints in Telugu, Hindi, and English.
+- Add AI-based complaint classification and department routing.
+- Add duplicate detection and one analytics card such as most reported issue.
+- Seed example complaints from multiple Indian states.
+- Rehearse one complete end-to-end demo.
+
+### Deliverable by 1:00 PM
+
+- Working citizen complaint page.
+- Working AI response in structured JSON.
+- Working backend ticket creation.
+- Working admin dashboard view.
+- Stable live demo with seeded national-level complaint examples.
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend citizen portal | React, Vite, Tailwind CSS |
+| Admin dashboard | React, Vite, Tailwind CSS, Chart.js or Plotly |
+| Backend API | Flask or Django REST Framework |
+| Database | MongoDB Atlas or PostgreSQL / MySQL |
+| Voice and multilingual support | Bhashini, optional AssemblyAI fallback  |
+| AI backbone | OpenRouter with structured outputs  |
+| NLP fallback | Hugging Face Inference API  |
+| Maps / geocoding | Google Maps API or OpenStreetMap Nominatim  |
+| Authentication | JWT |
+| File uploads | Cloudinary |
+| Deployment | Vercel, Render, Railway |
+| Collaboration | GitHub, Postman, Figma |
+
+## Suggested Architecture
+
+```text
+Citizen Input (Voice/Text/Image/Location)
+        -> Speech-to-Text / Translation
+        -> AI Complaint Analysis
+        -> Category + Department + Priority JSON
+        -> Backend Ticket Creation
+        -> Admin Dashboard
+        -> Tracking / Analytics
 ```
-cd existing_repo
-git remote add origin https://code.swecha.org/saimanikanta777/civiceye-ai.git
-git branch -M main
-git push -uf origin main
-```
 
-## Integrate with your tools
+This architecture keeps the MVP simple and demo-friendly while still showing how the system can scale nationally.
 
-- [ ] [Set up project integrations](https://code.swecha.org/saimanikanta777/civiceye-ai/-/settings/integrations)
+## Team Structure (5 Members)
 
-## Collaborate with your team
+1. **Product Lead / Presenter** - problem framing, pitch, documentation, demo flow.
+2. **Frontend Developer 1** - citizen portal.
+3. **Frontend Developer 2** - admin dashboard.
+4. **Backend Developer** - APIs, database, ticket logic.
+5. **AI/ML Engineer** - speech, classification, routing, duplicate logic.
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+## Project Pitch Summary
 
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+CivicEye AI India does not compete with existing grievance systems by replacing them. Instead, it strengthens them by making complaints easier to file, easier to understand, and easier to act on through multilingual voice input, AI structuring, smart routing, and better admin-side triage.
