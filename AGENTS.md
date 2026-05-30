@@ -1,6 +1,6 @@
 # AGENTS.md
 
-This document defines the responsibilities of each team member and AI-assisted development workflow for CivicEye AI India.
+This Document defines the responsibilities of each team member and AI-assisted development workflow for CivicEye AI India.
 
 ---
 
