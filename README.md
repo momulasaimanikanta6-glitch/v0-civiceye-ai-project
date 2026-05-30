@@ -77,3 +77,62 @@ This architecture keeps the MVP simple and demo-friendly while still showing how
 ## Project Pitch Summary
 
 CivicEye AI India does not compete with existing grievance systems by replacing them. Instead, it strengthens them by making complaints easier to file, easier to understand, and easier to act on through multilingual voice input, AI structuring, smart routing, and better admin-side triage.
+# Civiceye AI
+
+Single-page civic grievance platform with citizen login, admin login, Telugu voice filing, AI-assisted classification, department routing, SLA guidance, and live complaint tracking.
+
+## Project path
+Open this folder:
+- **/Users/konthamsaisriharshith/Desktop/Hack/civiceye-ai**
+
+## Run the working scaffold (local)
+You need **Python3** and **Node.js (npm)**.
+
+### 1) Backend (Flask)
+```bash
+cd backend
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python run.py
+```
+Backend: **http://localhost:5050**
+
+### 2) AI Service (FastAPI)
+```bash
+cd ai-service
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn main:app --host 0.0.0.0 --port 8000
+```
+AI Service: **http://localhost:8000**
+
+### 3) Main Frontend
+```bash
+cd frontend/citizen-app
+npm install
+npm run dev
+```
+App UI: **http://localhost:5173**
+
+The main app now includes both workspaces:
+- Citizen login: no password required for demo.
+- Admin login: use password **admin123**.
+
+## API sanity check
+```bash
+curl http://localhost:5050/api/health
+```
+
+## AI sanity check
+```bash
+curl -X POST http://localhost:8000/ai/classify \
+  -H "Content-Type: application/json" \
+  -d '{"text":"మా వీధిలో డ్రైనేజ్ బ్లాక్ అయింది వెంటనే పరిష్కరించండి","language":"auto"}'
+```
+
+## Notes
+- The backend works even if the AI service is offline by falling back to local routing rules.
+- The AI service gives richer category, priority, department, SLA, language, confidence, and summary signals.
+- The main frontend supports role-based login, logout, complaint submission, tracking, admin review, filtering, and status updates.
